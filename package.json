@@ -20,6 +20,8 @@
     "validateDefinitions": "cd tests && pnpm build && pnpm validateDefinitions",
     "validateSvgs": "cd tests && pnpm validateSvgs",
     "sanityCheck": "pnpm lint:check && pnpm typecheck && pnpm validateDefinitions",
+    "agent:server": "AGENT_MODE=1 pnpm --filter @suroi/server dev",
+    "agent:test": "./tests/node_modules/.bin/ts-node tests/ts/observation.test.ts && pytest tests/py/test_env.py tests/py/test_handshake.py",
     "fullReinstall": "rm -r node_modules pnpm-lock.yaml client/node_modules server/node_modules common/node_modules tests/node_modules && pnpm install",
     "fullReinstallWin": "del /f /s /q node_modules\\* pnpm-lock.yaml client\\node_modules\\* server\\node_modules\\* common\\node_modules\\* tests\\node_modules\\* & pnpm install"
   },

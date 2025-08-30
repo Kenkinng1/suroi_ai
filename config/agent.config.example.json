@@ -1,0 +1,11 @@
+{
+  "port": 8765,
+  "tick_hz": 20,
+  "allowlist": ["127.0.0.1"],
+  "agent_token": "change_me",
+  "reward_weights": {
+    "alive": 0.02,
+    "inside": 0.03,
+    "outside": -0.05
+  }
+}
